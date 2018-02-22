@@ -1,7 +1,9 @@
 import { combineReducers } from 'redux'
 import { update } from './actionsCreators'
 
-var cryptoListReducer = function (state = [], action) {
+const initialState = { cryptoList: [] }
+
+var cryptoListReducer = function (state = initialState, action) {
   console.log('cryptoList was called with state', state, 'and action', action)
 
   switch (action.type) {
